@@ -1,0 +1,19 @@
+{
+  "name": "entityengine",
+  "version": "1.0.0",
+  "description": "DialogEngine Entity Processor",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/behemehal/EntityEngine.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/behemehal/EntityEngine/issues"
+  },
+  "homepage": "https://github.com/behemehal/EntityEngine#readme"
+}
