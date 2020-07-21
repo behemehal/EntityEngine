@@ -238,6 +238,10 @@ class resolver {
                 if (item.start === -1) {
                     cleaned = changedString.split(' ')[0].split(item.nextSentence.target)[0]; //TODO EXPERİMENTAL CAREFUL: BU EĞER ENTİTY 0 LOKASYONUNDAYSA ÇALIŞIR EĞER ${sys.any} merhaba gibiyse item.start === -1 olarak geliyor
                     pos = [0, cleaned.length];
+                } else if(item.nextSentence.target === "") { // TODO EXPERIMENTAL FOR LAST WORD
+                    
+                    cleaned = changedString.split(' ')[changedString.split(' ').length-1]; //TODO EXPERİMENTAL CAREFUL: BU EĞER ENTİTY son LOKASYONUNDAYSA ÇALIŞIR EĞER merhaba ${sys.any} gibiyse item.nextSentence.target === "" olarak geliyor
+                    pos = [changedString.length - cleaned.length, changedString.length];
                 } else {
                     cleaned = changedString.slice(item.start).trim().split(' ')[0].split(item.nextSentence.target)[0]
                     pos = [item.start+1, item.start + cleaned.length +1];
