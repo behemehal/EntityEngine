@@ -112,9 +112,9 @@ var coreFunctions = {
         Object.entries(resolvedData).forEach(x => {
             var word = x[0];
             var entityName = x[1].entity;
-            nString = nString.replace(word, '${' + entityName + '}');
+            nString = nString.slice(0, x[1].phraseSlice.s) + '${' + entityName + '}' + nString.slice(x[1].phraseSlice.e, nString.length);
         });
-        /*
+        /* test te
            cleanUpWord(nString) = merhaba friday nasılsın , length == 3
 
            / BEFORE nString Change
